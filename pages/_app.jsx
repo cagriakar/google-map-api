@@ -2,7 +2,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
 import React from 'react';
-import GlobalStateProvider from '../components/context/GlobalStateProvider';
 import theme from '../src/theme';
 
 export default function MyApp(props) {
@@ -28,9 +27,7 @@ export default function MyApp(props) {
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
-                <GlobalStateProvider>
-                    <Component {...pageProps} />
-                </GlobalStateProvider>
+                <Component {...pageProps} />
             </ThemeProvider>
         </>
     );

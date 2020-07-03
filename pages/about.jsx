@@ -3,28 +3,13 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import {
-    useDispatch,
-    useStateValues
-} from '../components/context/GlobalStateProvider';
 import Copyright from '../src/Copyright';
 import Link from '../src/Link';
 import ProTip from '../src/ProTip';
 
 export default function About() {
-    const { count } = useStateValues();
-    const { handleIncrease, handleIncrease15 } = useDispatch();
-
     return (
         <Container maxWidth="sm">
-            <p>Counter: {count}</p>
-            <button type="button" onClick={handleIncrease}>
-                Increase
-            </button>
-            <button type="button" onClick={handleIncrease15}>
-                Increase By 15
-            </button>
-
             <Box my={4}>
                 <Typography variant="h4" component="h1" gutterBottom>
                     Next.js example
